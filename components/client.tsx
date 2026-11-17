@@ -3,7 +3,8 @@ import { useActionState, useEffect, useRef, useState, type ReactNode } from 'rea
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { loadStripe, type Stripe as StripeJs } from '@stripe/stripe-js';
+import { loadStripe } from '@stripe/stripe-js/pure';
+import type { Stripe as StripeJs } from '@stripe/stripe-js';
 import { Elements, PaymentElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import { price, cad, hh, TAX, type Province } from '@/lib/booking';
 import { signIn, signOut, type AuthState } from '@/app/(frontend)/sign-in/actions';

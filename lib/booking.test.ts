@@ -45,7 +45,8 @@ test('local hours map to the right UTC instant in each zone, across DST', () => 
   assert.equal(zonedInstant('2026-07-15', 10, 'America/Toronto').toISOString(), '2026-07-15T14:00:00.000Z'); // EDT
   assert.equal(zonedInstant('2026-03-08', 7, 'America/Toronto').toISOString(), '2026-03-08T11:00:00.000Z'); // spring-forward day
   assert.equal(zonedInstant('2026-03-08', 7, 'America/Vancouver').toISOString(), '2026-03-08T14:00:00.000Z'); // guess lands before the change
-  assert.equal(zonedInstant('2026-11-01', 7, 'America/Vancouver').toISOString(), '2026-11-01T15:00:00.000Z'); // fall-back day
+  assert.equal(zonedInstant('2026-11-01', 7, 'America/Toronto').toISOString(), '2026-11-01T12:00:00.000Z'); // fall-back day
+  assert.equal(zonedInstant('2026-11-01', 7, 'America/Vancouver').toISOString(), '2026-11-01T14:00:00.000Z'); // B.C. keeps UTC-7 from March 2026
   assert.equal(zonedInstant('2026-07-10', 10, 'America/Edmonton').toISOString(), '2026-07-10T16:00:00.000Z'); // MDT
   assert.deepEqual(zonedParts('2026-07-15T14:00:00.000Z', 'America/Toronto'), { date: '2026-07-15', hour: 10 });
   assert.deepEqual(zonedParts('2026-07-16T02:00:00.000Z', 'America/Vancouver'), { date: '2026-07-15', hour: 19 });
