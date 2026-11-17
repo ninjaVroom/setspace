@@ -44,6 +44,6 @@ The database check requires the migrated local database. Without Stripe test key
 
 `lib/booking.ts` holds booking and pricing rules. `app/api/bookings/` handles booking requests. `migrations/` includes the overlap constraint. `scripts/constraint.test.ts` checks concurrent inserts against PostgreSQL. The app also has a `/case-study` page.
 
-## Prototype
+## Figma design
 
-Figma prototype link pending.
+[View the Figma design](https://www.figma.com/design/kwk5Fp8gmnIetmyjON1SmP/SETSPACE).
