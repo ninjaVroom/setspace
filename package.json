@@ -22,7 +22,7 @@
     "@stripe/stripe-js": "10.2.1",
     "graphql": "16.15.0",
     "leaflet": "1.9.4",
-    "next": "15.4.11",
+    "next": "16.4.6",
     "payload": "3.93.0",
     "react": "19.1.1",
     "react-dom": "19.1.1",
@@ -37,5 +37,8 @@
     "@types/react-dom": "19.1.9",
     "embedded-postgres": "17.11.0-beta.19",
     "typescript": "5.9.2"
+  },
+  "overrides": {
+    "monaco-editor": "0.58.0-dev-20261111"
   }
 }
